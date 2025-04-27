@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../css/monthly.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <h2>Home</h2>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="payment.html">Payment</a></li>
+                <li><a href="vacant.html">Units</a></li>
+                <li><a href="all-tenant.html">Tenants</a></li>
+                <li><a href="admin-profile.html">Admin</a></li>
+                <li><a href="login.html">Logout</a></li>
+
+            </ul>
+        </nav>
+        <div class="main-content">
+            <header class="top-nav">
+                <h1>Units</h1>
+            </header>
+            <div class="content">
+                <div class="tab4">
+                    <div class="contents">
+                        <h1>Monthly Earnings for 2023 and 2024</h1>
+                        <canvas id="myChart" width="400" height="200"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+            // Step 2: Define the data
+            const ctx = document.getElementById('myChart').getContext('2d');
+            const myChart = new Chart(ctx, {
+                type: 'bar', // Specify the chart type
+                data: {
+                    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                    datasets: [
+                        {
+                            label: 'Earnings in 2023 (₱)',
+                            data: [500, 700, 800, 1000, 950, 1100, 1200, 1300, 1150, 1400, 1600, 1800], // Data for 2023
+                            backgroundColor: [
+                                'rgba(255, 0, 0, 0.6)',   // Red
+                                'rgba(255, 165, 0, 0.6)', // Orange
+                                'rgba(255, 255, 0, 0.6)', // Yellow
+                                'rgba(0, 128, 0, 0.6)',   // Green
+                                'rgba(0, 0, 255, 0.6)',   // Blue
+                                'rgba(75, 0, 130, 0.6)',  // Indigo
+                                'rgba(238, 130, 238, 0.6)', // Violet
+                                'rgba(255, 69, 0, 0.6)',  // OrangeRed
+                                'rgba(0, 255, 255, 0.6)', // Cyan
+                                'rgba(255, 20, 147, 0.6)', // DeepPink
+                                'rgba(128, 0, 128, 0.6)', // Purple
+                                'rgba(255, 0, 0, 0.6)',   // Red
+                            ],
+                            borderColor: [
+                                'rgba(255, 0, 0, 1)',   // Red
+                                'rgba(255, 165, 0, 1)', // Orange
+                                'rgba(255, 255, 0, 1)', // Yellow
+                                'rgba(0, 128, 0, 1)',   // Green
+                                'rgba(0, 0, 255, 1)',   // Blue
+                                'rgba(75, 0, 130, 1)',  // Indigo
+                                'rgba(238, 130, 238, 1)', // Violet
+                                'rgba(255, 69, 0, 1)',  // OrangeRed
+                                'rgba(0, 255, 255, 1)', // Cyan
+                                'rgba(255, 20, 147, 1)', // DeepPink
+                                'rgba(128, 0, 128, 1)', // Purple
+                                'rgba(255, 0, 0, 1)',   // Red
+                            ],
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'Earnings in 2024 (₱)',
+                            data: [600, 800, 900, 1050, 1000, 1150, 1250, 1350, 1200, 1450, 1650, 1850], // Data for 2024
+                            backgroundColor: [
+                                'rgba(255, 0, 0, 0.3)',   // Red (lighter)
+                                'rgba(255, 165, 0, 0.3)', // Orange (lighter)
+                                'rgba(255, 255, 0, 0.3)', // Yellow (lighter)
+                                'rgba(0, 128, 0, 0.3)',   // Green (lighter)
+                                'rgba(0, 0, 255, 0.3)',   // Blue (lighter)
+                                'rgba(75, 0, 130, 0.3)',  // Indigo (lighter)
+                                'rgba(238, 130, 238, 0.3)', // Violet (lighter)
+                                'rgba(255, 69, 0, 0.3)',  // OrangeRed (lighter)
+                                'rgba(0, 255, 255, 0.3)', // Cyan (lighter)
+                                'rgba(255, 20, 147, 0.3)', // DeepPink (lighter)
+                                'rgba(128, 0, 128, 0.3)', // Purple (lighter)
+                                'rgba(255, 0, 0, 0.3)',   // Red (lighter)
+                            ],
+                            borderColor: [
+                                'rgba(255, 0, 0, 1)',   // Red
+                                'rgba(255, 165, 0, 1)', // Orange
+                                'rgba(255, 255, 0, 1)', // Yellow
+                                'rgba(0, 128, 0, 1)',   // Green
+                                'rgba(0, 0, 255, 1)',   // Blue
+                                'rgba(75, 0, 130, 1)',  // Indigo
+                                'rgba(238, 130, 238, 1)', // Violet
+                                'rgba(255, 69, 0, 1)',  // OrangeRed
+                                'rgba(0, 255, 255, 1)', // Cyan
+                                'rgba(255, 20, 147, 1)', // DeepPink
+                                'rgba(128, 0, 128, 1)', // Purple
+                                'rgba(255, 0, 0, 1)',   // Red
+                            ],
+                            borderWidth: 1
+                        }
+                    ]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+
+
+
+</body>
+</html>

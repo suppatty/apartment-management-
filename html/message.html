@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/message.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <h2>Home</h2>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="payment.html">Payment</a></li>
+                <li><a href="vacant.html">Units</a></li>
+                <li><a href="all-tenant.html">Tenants</a></li>
+                <li><a href="admin-profile.html">Admin</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+        
+        <div class="main-content">
+            <header class="top-nav">
+                <h1>Messages</h1>
+            </header>
+            <div class="content">
+                <h2>Received Messages</h2>
+                <div class="tab4">
+                    <div class="contents">
+                        <table id="tenantTable">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Tenant ID</th>
+                                    <th>Message</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="messageBody">
+                                <tr>
+                                    <td colspan="4">No messages found.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../js/message.js"></script>
+    </body>
+</html>

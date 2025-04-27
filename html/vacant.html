@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/vacant.css" />
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <h2>Home</h2>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="payment.html">Payment</a></li>
+                <li><a href="vacant.html">Units</a></li>
+                <li><a href="all-tenant.html">Tenants</a></li>
+                <li><a href="admin-profile.html">admin</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+
+        <div class="main-content">
+            <header class="top-nav">
+                <h1>Units</h1>
+            </header>
+            <div class="contents">
+                <div id="unitContainer">
+                    <!-- Existing units will be populated here dynamically -->
+                </div>
+                <button class="add-unit-btn" ><a href="unitform.html">Add Unit</a></button>
+                <div class="edit-form" id="editForm" style="display:none;">
+                    <h3>Edit Unit</h3>
+                    <label for="unitName">Unit Number:</label>
+                    <input type="text" id="unitName" />
+                    <label for="unitStatus">Status:</label>
+                    <input type="text" id="unitStatus" />
+                    <button id="saveChangesBtn">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/vacant.js"></script>
+</body>
+</html>

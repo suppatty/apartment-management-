@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/vacant.css" />
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <h2>Home</h2>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="payment.html">Payment</a></li>
+                <li><a href="vacant.html">Units</a></li>
+                <li><a href="tenants-list.html">Tenants</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+
+        <div class="main-content">
+            <div class="ayusin">
+            <form id="addunitform">
+                <label for="unitNum">unit Number</label>
+                <input type="text" id="unitNum" required>
+
+                <label for="status">Status</label>
+                <input type="text" id="status" required>
+
+                <button type="submit">Add</button>
+            </form>
+            </div>  
+        </div>
+    </div>
+
+    <script src="../js/vacant.js"></script>
+</body>
+</html>

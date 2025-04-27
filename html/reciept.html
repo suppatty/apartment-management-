@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/payment.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+    <nav class="sidebar">
+        <h2>Home</h2>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="payment.html">Payment</a></li>
+            <li><a href="vacant.html">Units</a></li>
+            <li><a href="all-tenant.html">Tenants</a></li>
+            <li><a href="admin-profile.html">Admin</a></li>
+            <li><a href="reciept.html">Receipt</a></li>
+            <li><a href="login.html">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="main-content">
+        <header class="top-nav">
+            <h1>Payment</h1>
+        </header>
+        
+        <div class="content">
+            <h2>Print Receipt</h2>
+            <form id="receipt-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter tenant's name" required>
+                </div>
+                <div class="form-group">
+                    <label for="amount">Amount:</label>
+                    <input type="number" id="amount" name="amount" placeholder="Enter payment amount" required>
+                </div>
+                <div class="form-group">
+                    <label for="due-date">Due Date:</label>
+                    <input type="date" id="due-date" name="due-date" required>
+                </div>
+                <button type="button" id="print-receipt">Print Receipt</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- <script>
+document.getElementById('print-receipt').addEventListener('click', function() {
+    // Gather the form data
+    const name = document.getElementById('name').value;
+    const amount = document.getElementById('amount').value;
+    const dueDate = document.getElementById('due-date').value;
+
+    // Validate input fields
+    if (name && amount && dueDate) {
+        // Create a print-friendly receipt
+        const receiptContent = `
+            <div style="font-family: monospace; width: 200px; padding: 10px; border: 1px solid #000;">
+                <h3 style="text-align: center;">Receipt</h3>
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Amount:</strong> $${amount}</p>
+                <p><strong>Due Date:</strong> ${dueDate}</p>
+                <p><strong>Date:</strong> ${new Date().toLocaleDateString()}</p>
+            </div>
+        `;
+
+        // Open a new window and write the receipt content to it
+        const printWindow = window.open('', '', 'width=300,height=500');
+        printWindow.document.write(receiptContent);
+        printWindow.document.close();
+        
+        // Trigger the print dialog for thermal printer
+        printWindow.print();
+
+        // Close the print window after printing
+        printWindow.onafterprint = function() {
+            printWindow.close();
+        };
+    } else {
+        alert('Please fill out all fields.');
+    }
+});
+</script> -->
+<!-- <script>
+    document.getElementById('print-receipt').addEventListener('click', function() {
+        // Gather the form data
+        const name = document.getElementById('name').value;
+        const amount = document.getElementById('amount').value;
+        const dueDate = document.getElementById('due-date').value;
+    
+        // Validate input fields
+        if (name && amount && dueDate) {
+            // Create a print-friendly receipt
+            const receiptContent = `
+                <div style="font-family: monospace; width: 220px; padding: 10px; margin: 0 auto; border: none;">
+                    <h3 style="text-align: center; margin: 0; font-size: 16px;">Receipt</h3>
+                    <p style="margin: 5px 0;"><strong>Name:</strong> ${name}</p>
+                    <p style="margin: 5px 0;"><strong>Amount:</strong> $${amount}</p>
+                    <p style="margin: 5px 0;"><strong>Due Date:</strong> ${dueDate}</p>
+                    <p style="margin: 5px 0;"><strong>Date:</strong> ${new Date().toLocaleDateString()}</p>
+                    <hr style="border: none; border-top: 1px dashed #000; margin: 10px 0;">
+                    <p style="text-align: center; font-size: 12px; margin: 0;">Thank you for your payment!</p>
+                </div>
+            `;
+    
+            // Open a new window and write the receipt content to it
+            const printWindow = window.open('', '', 'width=300,height=500');
+            printWindow.document.write(`
+                <html>
+                    <head>
+                        <style>
+                            body {
+                                margin: 0;
+                                padding: 0;
+                            }
+                            .receipt {
+                                font-family: monospace;
+                                width: 220px;
+                                margin: 0 auto;
+                                padding: 10px;
+                                text-align: center;
+                            }
+                            .receipt h3 {
+                                margin: 0;
+                                font-size: 16px;
+                            }
+                            .receipt p {
+                                margin: 5px 0;
+                            }
+                            .receipt hr {
+                                border: none;
+                                border-top: 1px dashed #000;
+                                margin: 10px 0;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="receipt">
+                            ${receiptContent}
+                        </div>
+                    </body>
+                </html>
+            `);
+            printWindow.document.close();
+    
+            // Trigger the print dialog for thermal printer
+            printWindow.print();
+    
+            // Close the print window after printing
+            printWindow.onafterprint = function() {
+                printWindow.close();
+            };
+        } else {
+            alert('Please fill out all fields.');
+        }
+    });
+    </script> -->
+    <script>
+document.getElementById('print-receipt').addEventListener('click', function() {
+    // Gather the form data
+    const name = document.getElementById('name').value;
+    const amount = document.getElementById('amount').value;
+    const dueDate = document.getElementById('due-date').value;
+
+    // Validate input fields
+    if (name && amount && dueDate) {
+        // Create a print-friendly receipt
+        const receiptContent = `
+            <div style="font-family: monospace; width: 220px; padding: 10px; margin: 0 auto; border: none;">
+                <h3 style="text-align: center; margin: 0; font-size: 16px;">Receipt</h3>
+                <p style="margin: 5px 0;"><strong>Name:</strong> ${name}</p>
+                <p style="margin: 5px 0;"><strong>Amount:</strong> $${amount}</p>
+                <p style="margin: 5px 0;"><strong>Due Date:</strong> ${dueDate}</p>
+                <p style="margin: 5px 0;"><strong>Date:</strong> ${new Date().toLocaleDateString()}</p>
+                <hr style="border: none; border-top: 1px dashed #000; margin: 10px 0;">
+                <p style="text-align: center; font-size: 12px; margin: 0;">Thank you for your payment!</p>
+            </div>
+        `;
+
+        // Open a new window and write the receipt content to it
+        const printWindow = window.open('', '', 'width=300,height=500');
+        printWindow.document.write(`
+            <html>
+                <head>
+                    <style>
+                        body {
+                            margin: 0;
+                            padding: 0;
+                        }
+                        .receipt {
+                            font-family: monospace;
+                            width: 220px;
+                            margin: 0 auto;
+                            padding: 10px;
+                            text-align: center;
+                        }
+                        .receipt h3 {
+                            margin: 0;
+                            font-size: 16px;
+                        }
+                        .receipt p {
+                            margin: 5px 0;
+                        }
+                        .receipt hr {
+                            border: none;
+                            border-top: 1px dashed #000;
+                            margin: 10px 0;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <div class="receipt">
+                        ${receiptContent}
+                    </div>
+                </body>
+            </html>
+        `);
+        printWindow.document.close();
+
+        // Trigger the print dialog for thermal printer
+        printWindow.print();
+
+        // Close the print window after printing
+        printWindow.onafterprint = function() {
+            printWindow.close();
+        };
+    } else {
+        alert('Please fill out all fields.');
+    }
+});
+</script>
+
+
+</body>
+</html>

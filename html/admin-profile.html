@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/admin-profile.css" />
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <h2>Home</h2>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="payment.html">Payment</a></li>
+                <li><a href="vacant.html">Units</a></li>
+                <li><a href="all-tenant.html">Tenants</a></li>
+                <li><a href="admin-profile.html">Admin</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+
+        <div class="main-content">
+            <div class="container">
+                <h1>Admin List</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Email</th>
+                            <th>Password</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#001</td>
+                            <td>admin1@example.com</td>
+                            <td>••••••••</td>
+                            <td>
+                                <!-- <button class="edit-btn" onclick="editAdmin(1)">Edit Profile</button> -->
+                                <button class="delete-btn" onclick="deleteAdmin(1)">Delete Account</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#002</td>
+                            <td>admin2@example.com</td>
+                            <td>••••••••</td>
+                            <td>
+                                <!-- <button class="edit-btn" onclick="editAdmin(2)">Edit Profile</button> -->
+                                <button class="delete-btn" onclick="deleteAdmin(2)">Delete Account</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#003</td>
+                            <td>admin3@example.com</td>
+                            <td>••••••••</td>
+                            <td>
+                                <!-- <button class="edit-btn" onclick="editAdmin(3)">Edit Profile</button> -->
+                                <button class="delete-btn" onclick="deleteAdmin(3)">Delete Account</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/admin-profile.js"></script>
+</body>
+</html>

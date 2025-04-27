@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/all-tenant.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <h2>Home</h2>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="payment.html">Payment</a></li>
+                <li><a href="vacant.html">Units</a></li>
+                <li><a href="signin.html">Tenants</a></li>
+                <li><a href="admin-profile.html">Admin</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+
+        <div class="main-content">
+            <header class="top-nav">
+                <h1>All Tenants</h1>
+            </header>
+
+            <div class="content">
+                <div class="tab4">
+                    <div class="contents">
+                        <table id="tenantTable">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Unit Number</th> 
+                                    <th>Phone</th>
+                                    <th>Email</th>
+                                    <th>Password</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tenantBody">
+                                <!-- Data will be dynamically inserted here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Tenant Modal -->
+    <div id="editTenantModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Tenant</h2>
+            <form id="editTenantForm">
+                <input type="hidden" id="editTenantId">
+                <label for="editTenantName">Name:</label>
+                <input type="text" id="editTenantName" required>
+                <label for="editTenantUnit">Unit Number:</label>
+                <input type="text" id="editTenantUnit" required>
+                <label for="editTenantPhone">Phone:</label>
+                <input type="text" id="editTenantPhone" required>
+                <label for="editTenantEmail">Email:</label>
+                <input type="email" id="editTenantEmail" required>
+                <label for="editTenantPassword">Password:</label>
+                <input type="password" id="editTenantPassword" required>
+                <button type="submit">Update Tenant</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="deleteTenantModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Are you sure you want to delete this tenant?</h2>
+            <p id="deleteTenantName"></p>
+            <button id="confirmDeleteButton">Delete</button>
+            <button id="cancelDeleteButton">Cancel</button>
+        </div>
+    </div>
+
+    <script src="../js/all-tenant.js"></script>
+</body>
+</html>

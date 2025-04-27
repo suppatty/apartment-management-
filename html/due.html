@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/due.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <h2>Home</h2>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="payment.html">Payment</a></li>
+                <li><a href="vacant.html">Units</a></li>
+                <li><a href="all-tenant.html">Tenants</a></li>
+                <li><a href="admin-profile.html">Admin Profile</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+
+        <div class="main-content">
+            <header class="top-nav">
+                <h1>Due Date</h1>
+            </header>
+
+            <div class="content">
+                <div class="tab4">
+                    <div class="contents">
+
+                        <h2>Tenants and Due Date List</h2>
+
+                        <!-- Table -->
+                        <table id="unitTable">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Due Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Rows will be dynamically added here by JS -->
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/dueDate.js"></script>
+</body>
+</html>  
