@@ -1,0 +1,1 @@
+contextBridge.exposeInMainWorld('ipcRenderer', ipcRenderer);
